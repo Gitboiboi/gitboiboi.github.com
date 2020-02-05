@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Modes de couleur CSS - Articles RCC</title>
-	<meta name="description" content="Article de Raphael Chillio sur les différents modes de couleur en CSS">
+    <meta name="description" content="Article de Raphael Chillio sur les différents modes de couleur en CSS">
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
 	<link href="style.css" rel="stylesheet" />
 
@@ -32,7 +33,7 @@
 
     <div class="article-layout-ctn">
         <h2 class="works-title">
-            <span class="works-title-2">Comprendre les unités de couleur en CSS<br></span>
+            <span class="works-title-2">Comprendre les modes de couleur en CSS<br></span>
             <span class="works-title-1">rgb, rgba, #hex, hsl, hwb...<br><br></span>
         </h2>
         <p>
@@ -44,7 +45,7 @@
         <h3>Les Hexadecimales a.k.a. #40e2ed<br><br></h3>
         <p>
             Pour comprendre le fameux code couleur avec le <strong>#</strong> il faut d'abord savoir ce que veux dire hexadecimal.<br>
-            En informatique, l'hexadecimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.
+            En informatique, l'hexadecimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.<br>
             Ces unités sont :<br>
             <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F</strong><br>
             Ces 16 unités représentent un échelle allant de 0 à F, 0 ayant un intensité nulle et F une intensité maximale.
@@ -65,8 +66,8 @@
         </p>
         <h4>#RRGGBB</h4>
         <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui donne l'intensité.</strong><br>
-            Par exemple, si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#e00000, #e10000, #e20000 ... #fd0000 #fe0000#ff0000</strong><br>
+            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#e00000, #e10000, #e20000 ... #fd0000 #fe0000#ff0000</strong><br>
             <strong>#0000f8</strong> donne alors
             <div style="height: 30px; width: 30px; background-color: #0000ff; margin: 15px 0 30px;"></div>
         </p>
@@ -81,12 +82,12 @@
         <h4>rbg(R,G,B)</h4>
         <p>
             Le <strong>RGB</strong> est basé sur la même logique que l'hexadecimal, chaque valeur va définir l'intensité du rouge, du vert et du bleu mais cette fois-ci sur une échelle <strong>de 0 à 255</strong><br>
-            Le système rgb s'écrit <strong>rgb(R,G,B)</strong> tel que <strong>rgb(255,0,255)</strong> donne la couleur suivante :<br>
+            Le système rgb s'écrit <strong>rgb(R,G,B)</strong> tel que <strong>rgb(0,255,0)</strong> donne la couleur suivante :<br>
             <div style="height: 30px; width: 30px; background-color: rgb(0,255,0); margin: 15px 0 30px;"></div>
         </p>
         <h4>rbga(R,G,B,A)</h4>
         <p>
-            Cette notation permet de <strong>régler l'opacité sur du rgb.</strong> L'alpha s'écrit sur une échelle <strong>de 0 à 1</strong> avec deux décimales maximum.
+            Cette notation permet de <strong>régler l'opacité sur du rgb.</strong> L'alpha s'écrit sur une échelle <strong>de 0 à 1</strong> avec deux décimales maximum.<br>
             En l'écrivant <strong>rgba(R,G,B,A)</strong> tel que <strong>rgba(0,0,255,0.5)</strong> on obtient :<br>
             <div style="height: 30px; width: 30px; background-color: rgba(0,0,255,0.5); margin: 15px 0 30px;"></div>
             <br><br>
@@ -95,13 +96,13 @@
         <h4>hsl(H,S,L)</h4>
         <p>
             Les valeurs de l'<strong>HSL</strong> (hue saturation lightness) correspondent à la teinte déterminée en degrées <strong>de 0 à 360</strong>, la saturation <strong>en pourcentage</strong> et la lumière (le blanc) <strong>en pourcentage</strong> également<br>
-            déterminer une teinte en dégré peut paraitre ettonant mais peut s'avérer être une très bonne solution pour animer des changements de couleur par exemple. 
+            déterminer une teinte en dégré peut paraitre ettonant mais peut s'avérer être une très bonne solution pour animer des changements de couleur par exemple.<br>
             En animant mon hsl de <strong>hsl(0,100%,50%)</strong> à <strong>hsl(360,100%,50%)</strong> on peut voir ceci :<br>
             <div style="height: 30px; width: 30px; margin: 15px 0 30px;" id="color-modes-hsl"></div>
         </p>
         <h4>hsla(H,S,L,A)</h4>
         <p>
-            Vous commencez à avoir l'habitude, on rajoute une valeurs A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.
+            Vous commencez à avoir l'habitude, on rajoute une valeurs A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.<br>
             En écrivant <strong>hsla(230,90%,80%,0.6)</strong> on à :<br>
             <div style="height: 30px; width: 30px; background-color: hsla(230,90%,80%,0.6); margin: 15px 0 30px;"></div>
             <br><br>
@@ -120,7 +121,7 @@
         </p>
         <h4>currentcolor</h4>
         <p>
-            La valeur <strong>currentcolor</strong> permet de récuperer la couleur de la propriété <strong>color</strong> annoncée auparavant dans un même groupe.<br><br>
+            La valeur <strong>currentcolor</strong> permet de récupérer la couleur de la propriété <strong>color</strong> annoncée auparavant dans un même groupe.<br><br>
         </p>
         <h4>noir, blanc, rouge ...</h4>
         <p>
