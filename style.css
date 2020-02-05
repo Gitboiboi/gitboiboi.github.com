@@ -441,7 +441,7 @@ a.header-link:hover {
 	        align-items: center;
 	z-index: 5;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
 	.index-anim-logo-ctn {
 		height: 60vw;
 		width: 60vw;
@@ -482,46 +482,6 @@ a.header-link:hover {
 @keyframes spin {
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
-}
-@keyframes rcc-part-1 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(0, 13.4%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-2 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(-11.6%, 6.7%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-3 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(-11.55%, -6.7%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-4 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(0, -13.2%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-5 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(11.6%, -6.7%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-6 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(11.6%, 6.7%);}
-	100% {transform: translate(0, 0);}
-}
-@keyframes rcc-part-7 {
-	0% {transform: translate(0, -1%);}
-	50% {transform: translate(11.6%, -6.7%);}
-	100% {transform: translate(0, -1%);}
-}
-@keyframes rcc-part-8 {
-	0% {transform: translate(0, 0);}
-	50% {transform: translate(11.6%, 6.7%);}
-	100% {transform: translate(0, 0);}
 }
 
 /*  #########  Index titles ##  */
