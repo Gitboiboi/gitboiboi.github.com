@@ -112,6 +112,15 @@ header {
 	height: 42px;
 	padding: 18px 18px 18px 0;
 	width: auto;
+
+	transform-origin: 35% 50%;
+}
+.header-logo-ctn:hover .header-logo {
+	animation: logo-spin 1s ease;
+}
+@keyframes logo-spin {
+	0% {}
+	100% {transform: rotate(180deg)}
 }
 .header-links-ctn {
 	display: -webkit-box;
@@ -142,29 +151,26 @@ header {
 a.header-link:hover {
 	font-size: 20px;
 }
-.header-link:last-child {
-	padding-right: 0;
-}
-.header-link-yellow:hover{
-	color: #df9a1a;
-}
 .header-link-yellow {
 	color: #eaa100;
 	font-weight: 500;
 }
-.header-link-yellow-alt:hover{
-	color: #faf0db;
-}
-.header-link-yellow-alt {
-	color: #fff;
-	background: -o-linear-gradient(60deg, #f4c004, #f5cd2b);
-	background: linear-gradient(30deg, #f4c004, #f5cd2b);;
+.header-link-yellow:hover{
+	background-color: #f5cd2b20;
 }
 @media screen and (max-width: 480px) {
 	.header-link-yellow {
 		font-size: 23px;
 		padding: 0 20px;
 	}
+}
+.header-link-yellow-alt {
+	color: #fff;
+	background-color: #f4c004;
+}
+.header-link-yellow-alt:hover{
+	background-color: #f5cd2b;
+	color: #fff;
 }
 .header-reveal {
 	opacity: 1;
