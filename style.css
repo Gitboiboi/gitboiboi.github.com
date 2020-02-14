@@ -2204,6 +2204,9 @@ z-index: 10001;
 	padding: 0 10%;
 	width: 80%;
 }
+.slide-img:last-child {
+	margin-bottom: 10vh;
+}
 @media screen and (max-width: 900px) {
 	.pyrovista-logo-slide-img{
 		padding: 0 0;
