@@ -2065,7 +2065,7 @@ a.header-link:hover {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 58px;
-	z-index: 2000000;
+	z-index: 9000;
 }
 @media screen and (max-width: 700px) {
 	.project-sorting-ctn{
@@ -2144,7 +2144,7 @@ pointer-events: none;
 -webkit-transition: all 0.5s ease;
 -o-transition: all 0.5s ease;
 transition: all 0.5s ease;
-z-index: 10001;
+z-index: 9500;
 }
 .dark-bg-active {
 	opacity: 0.4;
@@ -2164,7 +2164,7 @@ z-index: 10001;
 	background-color: #f3fdfd;
 	-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.4);
 	        box-shadow: 0 0 40px rgba(0,0,0,0.4);
-	z-index: 10002;
+	z-index: 10000;
 
 	padding: 6vh 5vw;
 	overflow: scroll;
