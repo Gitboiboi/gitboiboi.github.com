@@ -132,6 +132,17 @@
     </div>
 </div>
 
+<script class="logo-header-hover-anim">
+    var headerLogo = document.querySelector('.header-logo');
+    function logoHoverAnim() {
+        headerLogo.classList.add('header-logo-active');
+
+        setTimeout(function() {
+            headerLogo.classList.remove('header-logo-active');
+        }, 1000);
+    }
+    headerLogo.addEventListener('mouseenter', logoHoverAnim);
+</script>
 <script class="top-header-reveal">
     const projectSlides = document.querySelectorAll('.slide-card');
     const header = document.querySelector('header');

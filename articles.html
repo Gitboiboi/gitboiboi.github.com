@@ -45,6 +45,15 @@
 
 <div class="portfolio-ctn">
 
+    <a href="article-2-css-measurement-units.html" class="article-ctn">
+        <div class="project-title-ctn article-title-ctn">
+            <h2 class="project-client">Les unités de mesure en CSS</h2>
+            <p class="project-client-job">px, cm, %, vw, em ...</p>
+            <p class="article-date">14 / 02 / 20</p>
+        </div>
+        <div class="project-plus article-plus">+</div>
+    </a>
+    <!--
     <a href="article-1-color-modes.html" class="article-ctn">
         <div class="project-title-ctn article-title-ctn">
             <h2 class="project-client">Les différents modes de couleur en CSS</h2>
@@ -53,11 +62,22 @@
         </div>
         <div class="project-plus article-plus">+</div>
     </a>
+    -->
 
 
 </div>
-</body>
 
+<script class="logo-header-hover-anim">
+    var headerLogo = document.querySelector('.header-logo');
+    function logoHoverAnim() {
+        headerLogo.classList.add('header-logo-active');
+
+        setTimeout(function() {
+            headerLogo.classList.remove('header-logo-active');
+        }, 1000);
+    }
+    headerLogo.addEventListener('mouseenter', logoHoverAnim);
+</script>
 <script class="top-header-reveal">
     const projectSlides = document.querySelectorAll('.slide-card');
 	const header = document.querySelector('header');
@@ -103,4 +123,5 @@
         projectCtn[i].addEventListener('mouseleave', removeProjectPlusActive);
     }
 </script>
+</body>
 </html>

@@ -631,8 +631,17 @@
 	</div>
 	<div id="last-element" style="height: 10vh;"></div>
 </div>
-</body>
+<script class="logo-header-hover-anim">
+    var headerLogo = document.querySelector('.header-logo');
+    function logoHoverAnim() {
+        headerLogo.classList.add('header-logo-active');
 
+        setTimeout(function() {
+            headerLogo.classList.remove('header-logo-active');
+        }, 1000);
+    }
+    headerLogo.addEventListener('mouseenter', logoHoverAnim);
+</script>
 <script class="container-reveal">
 	const aboutIntroBtn = document.querySelector('.about-intro-btn');
 	const aboutIntroCtn = document.querySelector('.about-intro-ctn');
@@ -757,4 +766,5 @@
   		
 	})
 </script>
+</body>
 </html>

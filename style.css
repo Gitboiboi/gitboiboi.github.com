@@ -13,10 +13,7 @@ body{
 	overflow-x: hidden;
 	background-color: #c1f2f2;
 }
-#main{
-	overflow: hidden;
-}
-p,h1,h2,h3,h4,h5,h6,ul,li,a {
+p,h1,h2,h3,h4,h5,h6,ul,li,a,strong {
 	font-family: 'Barlow';
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
@@ -67,6 +64,8 @@ ul,li {
 
 header {
 	position: fixed;
+	top: 0;
+	left: 0;
 	z-index: 100100;
 
 	min-width: 100vw;
@@ -100,7 +99,7 @@ header {
 	font-family: "Barlow";
 	text-transform: uppercase;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 	.header-title {
 		display: none;
 	}
@@ -115,8 +114,8 @@ header {
 
 	transform-origin: 35% 50%;
 }
-.header-logo-ctn:hover .header-logo {
-	animation: logo-spin 1s ease;
+.header-logo-active {
+	animation: logo-spin 1s ease forwards;
 }
 @keyframes logo-spin {
 	0% {}
@@ -148,8 +147,19 @@ header {
 	transition: all 0.4s ease;
 	cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+	.header-link {
+		font-size: 18px;
+		padding: 0 20px;
+	}
+}
 a.header-link:hover {
 	font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+	.header-link:hover {
+		font-size: 17px;
+	}
 }
 .header-link-yellow {
 	color: #eaa100;
@@ -160,7 +170,6 @@ a.header-link:hover {
 }
 @media screen and (max-width: 480px) {
 	.header-link-yellow {
-		font-size: 23px;
 		padding: 0 20px;
 	}
 }
@@ -1815,7 +1824,7 @@ a.header-link:hover {
 /*  #########  Portfolio Layout  ########  */
 .portfolio-top {
 	width: 100vw;
-	height: 70vh;
+	height: 60vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1904,20 +1913,21 @@ a.header-link:hover {
 	width: 100%;
 	top: 0;
 	left: 0;
-	-webkit-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
 
 	-webkit-box-shadow: inset 0 0 30px rgba(0,138,150,0.10);
 
 	        box-shadow: inset 0 0 30px rgba(0,138,150,0.10);
 }
 .project-ctn:hover::after {
-	-webkit-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
 	-webkit-box-shadow: inset 0 0 30px rgba(0,138,150,0);
-	        box-shadow: inset 0 0 30px rgba(0,138,150,0);
+			box-shadow: inset 0 0 30px rgba(0,138,150,0);
+	background-color: #fff8;
 }
 @media screen and (max-width: 750px) {
 	.project-ctn {
@@ -1936,6 +1946,7 @@ a.header-link:hover {
 }
 .project-title-ctn {
 	position: absolute;
+	z-index: 100;
 
 	width: calc(100% - 120px);
 	top: calc(1.6vw + 5px);
@@ -1970,10 +1981,9 @@ a.header-link:hover {
 	font-size: 30px;
 	cursor: pointer;
 
+	z-index: 100;
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
@@ -2043,52 +2053,65 @@ a.header-link:hover {
 	   object-fit: contain;
 	-o-object-position: bottom right;
 	   object-position: bottom right;
+	z-index: 100;
 }
 
 /*  #########  Portfolio Filters ########  */
 
 .project-sorting-ctn {
-	width: 90vw;
-	padding: 0 5vw;
+	width: 100vw;
+	padding: 20px 0 0;
 	margin-bottom: 30px;
-
 	position: -webkit-sticky;
-
 	position: sticky;
-    top: 100px;
+	top: 58px;
+	z-index: 2000000;
+}
+@media screen and (max-width: 700px) {
+	.project-sorting-ctn{
+		position: static;
+		width: 90vw;
+		padding: 20px 5vw 0;
+	}
 }
 .sorting-btns-ctn {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+		flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 5vw;
+
+	background-color: #008a96;;
+}
+@media screen and (max-width: 700px) {
+	.sorting-btns-ctn{
+		padding: 0;
+		justify-content: flex-start;
+	}
 }
 .sorting-btns-ctn h3{
-	color: #008a96;
-	font-size: calc(15px + 0.5vw);
-	margin: 0 10px 0 0;
-	padding: 5px 12px;
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 15px;
 	font-weight: 500;
 	cursor: pointer;
 }
 @media screen and (max-width: 700px) {
 	.sorting-btns-ctn h3{
 		background-color: rgba(0,138,150,0.08);
-		height: 60px;
-		margin: 0 10px 10px 0;
-		font-size: 18px;
+		font-size: 16px;
+		height:40px;
+		padding: 2px 14px;
+		margin: 0 10px 0 0;
 		display: flex;
 		align-items: center;
 	}
 }
-.sorting-btns-ctn h3:last-child{
-	margin-right: 0;
-	padding: 5px 12px;
-}
 h3.portfolio-filter-active {
-	background-color: #008a96;
-	color: #fff;
+	background-color: #fff;
+	color: #008a96;
 	transition: all 0.3s;
 }
 .portfolio-hr {
@@ -2135,6 +2158,7 @@ z-index: 10001;
 	top: 78px;
 	left: 0;
 	width: 80vw;
+	max-width: 900px;
 	height: calc(88vh - 78px);
 	max-height: calc(90vh - 78px);
 	background-color: #f3fdfd;
@@ -2161,11 +2185,6 @@ z-index: 10001;
 		max-height: 100vh;
 	}
 }
-@media screen and (min-width: 1800px) {
-	.slide-card {
-		max-width: 50vw;
-	}
-}
 .slide-card-active {
 	-ms-transform: translateX(0);
 	    transform: translateX(0);
@@ -2181,7 +2200,7 @@ z-index: 10001;
 }
 .slide-card h3{
 	color: #eaa100;
-	margin-bottom: 12px;
+	margin-bottom: 5px;
 }
 .slide-card h4{
 	color: #008a96;
@@ -2189,6 +2208,7 @@ z-index: 10001;
 }
 .slide-card p{
 	color: #002124;
+	margin-top: 20px;
 }
 .slide-img {
 	width: 100%;
