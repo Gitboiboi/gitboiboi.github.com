@@ -11,6 +11,8 @@ body, html{
 }
 body{
 	background-color: #c1f2f2;
+	overflow: hidden;
+	overflow-y: scroll;
 }
 #main-ctn{
 	overflow: hidden;
@@ -977,7 +979,7 @@ a.header-link:hover {
 	margin: 15px 0 8px;
 }
 .about-skills-logo {
-	height: 50px;
+	height: 30px;
 	margin-right: 10px;
 }
 .about-skills-logo-ctn {

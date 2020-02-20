@@ -33,31 +33,38 @@
 
     <div class="article-layout-ctn">
         <h2 class="works-title">
-            <span class="works-title-2">Les unite2s de mesure en CSS<br></span>
+            <span class="works-title-2">Les unités de mesure en CSS<br></span>
             <span class="works-title-1">px, cm, %, vw, em ...<br><br></span>
         </h2>
         <p>
-            La liste des unités de mesures en CSS est longue, chacune ayant ses spécificités il est indispensable de les connaitre pour optimiser ses compétences de mise en page !<br>
-            Je vais passer en revue avec vous l'ensemble des ces unités pour enfin les comprendre toutes<br><br><br>
+            En CSS chaque unité de mesure à ses spécificités, il est toujours intéressant de les connaitre pour optimiser ses compétences de mise en page !<br>
+            Je vais passer en revue l'ensemble des ces unités avec vous pour enfin les comprendre toutes<br><br><br>
         </p>
 
         <h3>Quelque notions utiles<br><br></h3>
-        <h4>La différence entre la taille de l'écran, la résolution, le viewport et le pixel ratio</h4>
+        <h4>La différence entre la taille de l'écran, la résolution physique, la résolution logique et le pixel ratio</h4>
         <p>
             Afin de pouvoir parler de mesure il faut d'abord comprendre l'environnement dans lequel on se place pour les effectuer.<br>
-            Vous avez peut être déjà vu deux tailles différentes en pixel pour un même appareil, ce qui peut porter à confusion, et puis dans tous les cas, un écran, ça se mesure en pixel ou en pouces?<br><br>
+            Vous avez peut être déjà vu deux tailles différentes en pixel pour un même appareil, ce qui peut porter à confusion, et puis dans tous les cas, un écran, ça se mesure en pixel ou en pouce?<br><br>
 
             <strong>La taille de l'écran</strong><br>
-            textextextext<br><br>
+            La taille de l'écran est <strong>la longueur de sa diagonale en pouces</strong> (souvent écrit en anglais : inches ou in).<br>
+            Vous pouvez la mesurer vous même avec une règle<br><br>
 
-            <strong>La résolution</strong><br>
-            textextextext<br><br>
+            <strong>La résolution physique</strong><br>
+            La résolution d'un écran, c'est <strong>le nombre de pixels de sa longueur et sa hauteur</strong>.<br>
+            Si je ne me trompe pas, la résolution de votre écran devrait être de <strong></strong><span id="article-2-screen-width"></span> par <span id="article-2-screen-height"></span></strong><br><br>
 
-            <strong>Le viewport</strong><br>
-            textextextext<br><br>
+            <strong>La résolution logique (ou viewport)</strong><br>
+            La résolution logique est <strong>le nombre de pixels qu'affiche votre écran</strong> :<br>
+            Vous savez peut-être que deux écrans de même taille peuvent avoir une résolution différente, car il existe des pixels de différente taille.<br>
+            Donc pour une taille d'écran donnée, <strong>plus ses pixels sont petit, plus la résolution physique augmente et plus l'image est précise.</strong>
+            Cependant si les longueurs CSS en pixel dépendaient de la taille des pixels physiques un élément de 30px de hauteur serait deux fois plus petit sur un écran HD que sur un écran classique .<br><br>
+            Pour palier à ce problème on défini une résolution logique qui <strong>permet de garder des proportions similaires</strong> entre les éléments web sur des écrans de résolution différente.<br><br>
 
             <strong>Le pixel ratio</strong><br>
-            textextextext<br><br>
+            Le pixel ratio est <strong>le rapport entre la résolution physique et logique</strong> : Si un écran utilise 2 pixels physique (votre écran) pour 1 pixel logique (CSS) le pixel ratio est de 2<br>
+            <strong>(pixel ratio = résolution physique / résolution logique)</strong><br><br>
 
             <div style="background-color: black; height:10px; width: 10px; margin:20px 20px 20px 0"></div>
             <div style="background-color: black; height:10mm; width: 10mm; margin:20px 20px 20px 0"></div>
@@ -171,5 +178,14 @@
     if ((window.innerWidth > 700) || (prevScrollpos == 0)) {
         header.classList.add('header-reveal');
     }
+</script>
+
+<script class="screen-resolution-finder">
+    const screenWidthCtn = document.querySelector('#article-2-screen-width');
+    const screenHeightCtn = document.querySelector('#article-2-screen-height');
+
+    screenWidthCtn.innerHTML += `${screen.width}px`;
+    screenHeightCtn.innerHTML += `${screen.height}px`;
+
 </script>
 </body>
