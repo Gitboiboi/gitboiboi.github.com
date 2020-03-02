@@ -47,9 +47,10 @@
     <div class="sorting-btns-ctn">
         <h3 class="filter-btn portfolio-filter-active all-projects-btn">Tous les projets</h3>
         <h3 class="filter-btn branding-btn">Branding / Logo</h3>
-        <h3 class="filter-btn uiux-btn">UI / UX</h3>
-        <h3 class="filter-btn print-btn">Print</h3>
         <h3 class="filter-btn dev-btn">Dev web</h3>
+        <h3 class="filter-btn illu-btn">Illustration</h3>
+        <h3 class="filter-btn print-btn">Print</h3>
+        <h3 class="filter-btn uiux-btn">UI / UX</h3>
     </div>
 </div>
 
@@ -60,6 +61,16 @@
                 <h2 class="project-client">UNIC</h2>
                 <p class="project-client-job">Cabinet d'architecte</p>
                 <p class="project-description">Site internet</p>
+            </div>
+            <div class="project-plus">+</div>
+        </img>
+    </div>
+    <div class="project-ctn project-ctn-illu project-ctn-dev">
+        <img src="img/projet-illu-autoportrait.png" alt="" class="project-img">
+            <div class="project-title-ctn">
+                <h2 class="project-client">RCC</h2>
+                <p class="project-client-job">Graphiste et webdesigner</p>
+                <p class="project-description">illustration et animation</p>
             </div>
             <div class="project-plus">+</div>
         </img>
@@ -193,7 +204,7 @@
             <div class="project-plus">+</div>
         </img>
     </div>
-    <div class="project-ctn project-ctn-print">
+    <div class="project-ctn project-ctn-print project-ctn-illu">
         <img src="img/projet-cover-space-traveller-moher.png" alt="" class="project-img">
             <div class="project-title-ctn">
                 <h2 class="project-client">Space traveller - Moher</h2>
@@ -203,7 +214,7 @@
             <div class="project-plus">+</div>
         </img>
     </div>
-    <div class="project-ctn project-ctn-print">
+    <div class="project-ctn project-ctn-print project-ctn-illu">
         <img src="img/projet-cover-sequences-a3.png" alt="" class="project-img">
             <div class="project-title-ctn">
                 <h2 class="project-client">Sequences - A3</h2>
@@ -213,7 +224,7 @@
             <div class="project-plus">+</div>
         </img>
     </div>
-    <div class="project-ctn project-ctn-print">
+    <div class="project-ctn project-ctn-print project-ctn-illu">
         <img src="img/projet-cover-sensual-kuppeil.png" alt="" class="project-img">
             <div class="project-title-ctn">
                 <h2 class="project-client">Sensuel EP - Küppeil</h2>
@@ -244,6 +255,25 @@
         </p>
         <img src="img/slide-2-site-unic.png" alt="" class="slide-img">
         <img src="img/slide-1-site-unic.png" alt="" class="slide-img">
+    </div>
+    <div class="slide-card">
+        <h2>RCC</h2>
+        <h3>Graphiste et webdesigner</h3>
+        <h4>Illustration et animation</h4>
+        <div class="about-skills-logo-ctn">
+            <img src="img/about_icons/about-ai.png" alt="ai-logo" class="about-skills-logo">
+            <img src="img/about_icons/about-html.png" alt="ai-logo" class="about-skills-logo">
+            <img src="img/about_icons/about-css.png" alt="ai-logo" class="about-skills-logo">
+            <img src="img/about_icons/about-js.png" alt="ai-logo" class="about-skills-logo">
+        </div>
+        <p>
+            Dans l'optique de développer mes compétences en illustration vectorielle, je me suis donné le défi d'en produire une nouvelle tous les mois, et même de les animer en css/js.<br>
+            Cet autoportrait est la première création de cette série
+
+            Vous pouvez voir l'animation sur Codepen<a href="https://codepen.io/CPboiboi/pen/jOPwjGb"> en cliquant ici</a>.
+        </p>
+        <img src="img/slide-1-illu-autoportrait.png" alt="" class="slide-img">
+        
     </div>
     <div class="slide-card">
         <h2>To the moon</h2>
@@ -643,12 +673,14 @@
     const uiuxProjects = document.querySelectorAll('.project-ctn-uiux');
     const printProjects = document.querySelectorAll('.project-ctn-print');
     const devProjects = document.querySelectorAll('.project-ctn-dev');
+    const illuProjects = document.querySelectorAll('.project-ctn-illu');
 
     const allProjectsBtn = document.querySelector('.all-projects-btn');
     const brandingBtn = document.querySelector('.branding-btn');
     const uiuxBtn = document.querySelector('.uiux-btn');
     const printBtn = document.querySelector('.print-btn');
     const devBtn = document.querySelector('.dev-btn');
+    const illuBtn = document.querySelector('.illu-btn');
 
     function filterNone() {
         for (let i = 0; i < projectCtn.length; i++) {
@@ -712,12 +744,26 @@
         }
         devBtn.classList.add('portfolio-filter-active');
     }
+    function filterIllu() {
+        for (let i = 0; i < projectCtn.length; i++) {
+            projectCtn[i].style.display = 'none';
+        }
+        for (let i = 0; i < illuProjects.length; i++) {
+            illuProjects[i].style.display = 'block';
+        }
+
+        for (let i = 0; i < filterBtns.length; i++) {
+            filterBtns[i].classList.remove('portfolio-filter-active');
+        }
+        illuBtn.classList.add('portfolio-filter-active');
+    }
 
     allProjectsBtn.addEventListener('click', filterNone);
     brandingBtn.addEventListener('click', filterBranding);
     uiuxBtn.addEventListener('click', filterUiux);
     printBtn.addEventListener('click', filterPrint);
     devBtn.addEventListener('click', filterDev);
+    illuBtn.addEventListener('click', filterIllu);
     
 </script>
 </html>
