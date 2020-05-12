@@ -42,25 +42,25 @@
             Allez on commence en douceur avec le plus connu.<br><br><br>
         </p>
 
-        <h3>Les Hexadecimales a.k.a. #40e2ed<br><br></h3>
+        <h3>Les Hexadécimales a.k.a. #40e2ed<br><br></h3>
         <p>
-            Pour comprendre le fameux code couleur avec le <strong>#</strong> il faut d'abord savoir ce que veux dire hexadecimal.<br>
-            En informatique, l'hexadecimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.<br>
+            Pour comprendre le fameux code couleur avec le <strong>#</strong> il faut d'abord savoir ce que veux dire hexadécimal.<br>
+            En informatique, l'hexadécimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.<br>
             Ces unités sont :<br>
             <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F</strong><br>
-            Ces 16 unités représentent un échelle allant de 0 à F, 0 ayant un intensité nulle et F une intensité maximale.
-            Le système de couleur hexadecimal est <strong>basé sur l'affichage RGB</strong> (red, green, blue) de nos écrans. Du fait de la synthèse additive des couleurs si l'on donne une intensité maximale à chaque couleur on obtient du blanc et inversement on obtient du noir si l'intensité est nulle.<br><br>
+            Ces 16 unités représentent une échelle allant de 0 à F, 0 ayant une intensité nulle et F une intensité maximale.
+            Le système de couleur hexadécimal est <strong>basé sur l'affichage RGB</strong> (red, green, blue) de nos écrans. Du fait de la synthèse additive des couleurs, si l'on donne une intensité maximale à chaque couleur on obtient du blanc, et inversement on obtient du noir si l'intensité est nulle.<br><br>
             Il existe <strong>4 manières</strong> d'écrire les couleurs en hexadécimal : avec 3, 4, 6 et 8 valeurs après le #.<br><br>
         </p>
         <h4>#RGB</h4>
         <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br>
+            Ce système se lit tel que <strong>#RGB</strong> où R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. On obtient la couleur suivante :<br>
             <div style="height: 30px; width: 30px; background-color: #f00; margin: 15px 0 30px;"></div>
         </p>
         <h4>#RGBA</h4>
         <p>
-            Ce système est le même que le précédent mais avec la possibilié de <strong>déterminer l'opacité</strong> en même temps que la couleur. <strong>L'opacité est mesurée de 0 à f</strong> et se place à la fin du code.<br>
+            Ce système est le même que le précédent, mais avec la possibilité de <strong>déterminer l'opacité</strong> en même temps que la couleur. <strong>L'opacité est mesurée de 0 à f</strong> et se place à la fin du code.<br>
             Ainsi <strong>#f004</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu et une opacité de 4 sur f (soit 4 sur 16). Avec ce code nous obtenons la couleur suivante :<br>
             <div style="height: 30px; width: 30px; background-color: #0f04; margin: 15px 0 30px;"></div>
         </p>
@@ -73,7 +73,7 @@
         </p>
         <h4>#RRGGBBAA</h4>
         <p>
-            Ce système est le même que le précédent mais avec la possibilié de <strong>déterminer l'opacité</strong> en même temps que la couleur, comme pour le <strong>#RGBA.</strong> L'opacité est mesurée <strong>de 00 à ff</strong> et se place à la fin du code.<br>
+            Ce système est le même que le précédent, mais avec la possibilié de <strong>déterminer l'opacité</strong> en même temps que la couleur, comme pour le <strong>#RGBA.</strong> L'opacité est mesurée <strong>de 00 à ff</strong> et se place à la fin du code.<br>
             Ainsi <strong>#ff000022</strong> à une opacité de 22 sur ff (soit 22 sur 160). Nous obtenons alors :<br>
             <div style="height: 30px; width: 30px; background-color: #ff000022; margin: 15px 0 30px;"></div>
             <br><br>
@@ -81,7 +81,7 @@
         <h3>Les RGB, la base de nos écrans<br><br></h3>
         <h4>rbg(R,G,B)</h4>
         <p>
-            Le <strong>RGB</strong> est basé sur la même logique que l'hexadecimal, chaque valeur va définir l'intensité du rouge, du vert et du bleu mais cette fois-ci sur une échelle <strong>de 0 à 255</strong><br>
+            Le <strong>RGB</strong> est basé sur la même logique que l'hexadécimal, chaque valeur va définir l'intensité du rouge, du vert et du bleu mais cette fois-ci sur une échelle <strong>de 0 à 255</strong><br>
             Le système rgb s'écrit <strong>rgb(R,G,B)</strong> tel que <strong>rgb(0,255,0)</strong> donne la couleur suivante :<br>
             <div style="height: 30px; width: 30px; background-color: rgb(0,255,0); margin: 15px 0 30px;"></div>
         </p>
@@ -95,18 +95,18 @@
         <h3>Le HSL, une nouvelle manière de déterminer la teinte<br><br></h3>
         <h4>hsl(H,S,L)</h4>
         <p>
-            Les valeurs de l'<strong>HSL</strong> (hue saturation lightness) correspondent à la teinte déterminée en degrées <strong>de 0 à 360</strong>, la saturation <strong>en pourcentage</strong> et la lumière (le blanc) <strong>en pourcentage</strong> également<br>
+            Les valeurs de l'<strong>HSL</strong> (hue saturation lightness) correspondent à la teinte déterminée en degré <strong>de 0 à 360</strong>, la saturation <strong>en pourcentage</strong> et la lumière (le blanc) <strong>en pourcentage</strong> également<br>
             En animant notre hsl de <strong>hsl(0,100%,50%)</strong> à <strong>hsl(360,100%,50%)</strong> on peut voir ceci :<br>
             <div style="height: 30px; width: 30px; margin: 15px 0 30px;" id="color-modes-hsl"></div>
         </p>
         <h4>hsla(H,S,L,A)</h4>
         <p>
-            Vous commencez à avoir l'habitude, on rajoute une valeurs A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.<br>
+            Vous commencez à avoir l'habitude, on rajoute une valeur A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.<br>
             En écrivant <strong>hsla(230,90%,80%,0.6)</strong> on à :<br>
             <div style="height: 30px; width: 30px; background-color: hsla(230,90%,80%,0.6); margin: 15px 0 30px;"></div>
             <br><br>
         </p>
-        <h3>Le HWB, une alternative au HSL (pas encore displonible)<br><br></h3>
+        <h3>Le HWB, une alternative au HSL (pas encore disponible)<br><br></h3>
         <h4>hwb(H,W,B)</h4>
         <p>
             <strong>HWB</strong> est une suggestion pour la prochaine version de CSS (CSS4), ses initiales correspondent à Hue Black White. Il fonctionne de la même manière que <strong>HSL</strong> à la différence que la valeur du milieu correspond cette fois au <strong>pourcentage de noir.</strong><br>
