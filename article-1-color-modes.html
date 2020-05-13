@@ -18,156 +18,122 @@
 </head>
 
 <body>
-<div id="main">
-    <header>
-        <a href="index.html" class="header-logo-ctn">
-            <img src="img/rcc-logo.svg" alt="rcc-logo" class="header-logo">
-            <p class="header-title">Raphael&nbsp;<span class="header-rcc-yellow">Chillio</span></p>
-        </a>
-        <div class="header-links-ctn">
-            <a class="header-link header-link-index" id="header-pres" href="index.html">Accueil</a>
-            <a class="header-link header-link-yellow header-link-yellow-alt" id="header-port" href="portfolio.html">Portfolio</a>
-            <a class="header-link header-link-yellow" id="header-arti" href="articles.html">Articles</a>
+    <div id="main">
+        <header>
+            <a href="index.html" class="header-logo-ctn">
+                <img src="img/rcc-logo.svg" alt="rcc-logo" class="header-logo">
+                <p class="header-title">Raphael&nbsp;<span class="header-rcc-yellow">Chillio</span></p>
+            </a>
+            <div class="header-links-ctn">
+                <a class="header-link header-link-index" id="header-pres" href="index.html">Accueil</a>
+                <a class="header-link header-link-yellow header-link-yellow-alt" id="header-port" href="portfolio.html">Portfolio</a>
+                <a class="header-link header-link-yellow" id="header-arti" href="articles.html">Articles</a>
+            </div>
+        </header>
+
+        <div class="article-layout-ctn">
+            <h2 class="works-title">
+                <span class="works-title-2">Comprendre les modes de couleur en CSS<br></span>
+                <span class="works-title-1">rgb, rgba, #hex, hsl, hwb...<br><br></span>
+            </h2>
+            <p>
+                Il existe différentes manières d'écrire les couleurs en CSS.<br>
+                Chacune ayant ses spécifités il interessant de toutes les connaitre pour être sur de maximiser ses possiblités de création, mais aussi pour ne plus vous demander quel est ce mystérieux <strong>hsl</strong> ou <strong>#f6b4</strong> dans les prochains fichiers que vous lirez.<br>
+                Allez on commence en douceur avec le plus connu.<br><br><br>
+            </p>
+
+            <h3>Les Hexadécimales a.k.a. #40e2ed<br><br></h3>
+            <p>
+                Pour comprendre le fameux code couleur avec le <strong>#</strong> il faut d'abord savoir ce que veux dire hexadécimal.<br>
+                En informatique, l'hexadécimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.<br>
+                Ces unités sont :<br>
+                <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F</strong><br>
+                Ces 16 unités représentent une échelle allant de 0 à F, 0 ayant une intensité nulle et F une intensité maximale.
+                Le système de couleur hexadécimal est <strong>basé sur l'affichage RGB</strong> (red, green, blue) de nos écrans. Du fait de la synthèse additive des couleurs, si l'on donne une intensité maximale à chaque couleur on obtient du blanc, et inversement on obtient du noir si l'intensité est nulle.<br><br>
+                Il existe <strong>4 manières</strong> d'écrire les couleurs en hexadécimal : avec 3, 4, 6 et 8 valeurs après le #.<br><br>
+            </p>
+            <h4>#RGB</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> où R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. On obtient la couleur suivante :<br>
+                <div style="height: 30px; width: 30px; background-color: #f00; margin: 15px 0 30px;"></div>
+            </p>
+            <h4>#RGBA</h4>
+            <p>
+                Ce système est le même que le précédent, mais avec la possibilité de <strong>déterminer l'opacité</strong> en même temps que la couleur. <strong>L'opacité est mesurée de 0 à f</strong> et se place à la fin du code.<br>
+                Ainsi <strong>#f004</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu et une opacité de 4 sur f (soit 4 sur 16). Avec ce code nous obtenons la couleur suivante :<br>
+                <div style="height: 30px; width: 30px; background-color: #0f04; margin: 15px 0 30px;"></div>
+            </p>
+            <h4>#RRGGBB</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br>
+                <strong>#0000f8</strong> donne alors
+                <div style="height: 30px; width: 30px; background-color: #0000ff; margin: 15px 0 30px;"></div>
+            </p>
+            <h4>#RRGGBBAA</h4>
+            <p>
+                Ce système est le même que le précédent, mais avec la possibilié de <strong>déterminer l'opacité</strong> en même temps que la couleur, comme pour le <strong>#RGBA.</strong> L'opacité est mesurée <strong>de 00 à ff</strong> et se place à la fin du code.<br>
+                Ainsi <strong>#ff000022</strong> à une opacité de 22 sur ff (soit 22 sur 160). Nous obtenons alors :<br>
+                <div style="height: 30px; width: 30px; background-color: #ff000022; margin: 15px 0 30px;"></div>
+                <br><br>
+            </p>
+            <h3>Les RGB, la base de nos écrans<br><br></h3>
+            <h4>rbg(R,G,B)</h4>
+            <p>
+                Le <strong>RGB</strong> est basé sur la même logique que l'hexadécimal, chaque valeur va définir l'intensité du rouge, du vert et du bleu mais cette fois-ci sur une échelle <strong>de 0 à 255</strong><br>
+                Le système rgb s'écrit <strong>rgb(R,G,B)</strong> tel que <strong>rgb(0,255,0)</strong> donne la couleur suivante :<br>
+                <div style="height: 30px; width: 30px; background-color: rgb(0,255,0); margin: 15px 0 30px;"></div>
+            </p>
+            <h4>rbga(R,G,B,A)</h4>
+            <p>
+                Cette notation permet de <strong>régler l'opacité sur du rgb.</strong> L'alpha s'écrit sur une échelle <strong>de 0 à 1</strong> avec deux décimales maximum.<br>
+                En l'écrivant <strong>rgba(R,G,B,A)</strong> tel que <strong>rgba(0,0,255,0.5)</strong> on obtient :<br>
+                <div style="height: 30px; width: 30px; background-color: rgba(0,0,255,0.5); margin: 15px 0 30px;"></div>
+                <br><br>
+            </p>
+            <h3>Le HSL, une nouvelle manière de déterminer la teinte<br><br></h3>
+            <h4>hsl(H,S,L)</h4>
+            <p>
+                Les valeurs de l'<strong>HSL</strong> (hue saturation lightness) correspondent à la teinte déterminée en degré <strong>de 0 à 360</strong>, la saturation <strong>en pourcentage</strong> et la lumière (le blanc) <strong>en pourcentage</strong> également<br>
+                En animant notre hsl de <strong>hsl(0,100%,50%)</strong> à <strong>hsl(360,100%,50%)</strong> on peut voir ceci :<br>
+                <div style="height: 30px; width: 30px; margin: 15px 0 30px;" id="color-modes-hsl"></div>
+            </p>
+            <h4>hsla(H,S,L,A)</h4>
+            <p>
+                Vous commencez à avoir l'habitude, on rajoute une valeur A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.<br>
+                En écrivant <strong>hsla(230,90%,80%,0.6)</strong> on à :<br>
+                <div style="height: 30px; width: 30px; background-color: hsla(230,90%,80%,0.6); margin: 15px 0 30px;"></div>
+                <br><br>
+            </p>
+            <h3>Le HWB, une alternative au HSL (pas encore disponible)<br><br></h3>
+            <h4>hwb(H,W,B)</h4>
+            <p>
+                <strong>HWB</strong> est une suggestion pour la prochaine version de CSS (CSS4), ses initiales correspondent à Hue Black White. Il fonctionne de la même manière que <strong>HSL</strong> à la différence que la valeur du milieu correspond cette fois au <strong>pourcentage de noir.</strong><br>
+                On écrit donc le degré de la teinte <strong>de 0 à 360</strong>, le <strong>pourcentage</strong> de blanc et le <strong>pourcentage</strong> de noir.<br>
+                Ce système pourrait également avoir une notation <strong>hwba(H,W,B,A)</strong> qui prendrait en compte l'opacité.<br><br><br>
+            </p>
+            <h3>Quelques cas particuliers<br><br></h3>
+            <h4>transparent</h4>
+            <p>
+                La valeur <strong>transparent</strong> permet de rendre un élément totalement transparent, cela revient au même que d'écrire <strong>#0000</strong> ou encore <strong>rgba(0,0,0,0)</strong><br><br>
+            </p>
+            <h4>currentcolor</h4>
+            <p>
+                La valeur <strong>currentcolor</strong> permet de récupérer la couleur de la propriété <strong>color</strong> annoncée auparavant dans un même groupe.<br><br>
+            </p>
+            <h4>noir, blanc, rouge ...</h4>
+            <p>
+                Vous pouvez également utiliser les noms des couleurs pour les définir, vous pouvez retrouver <a href="https://htmlcolorcodes.com/fr/noms-de-couleur/">la liste complète des couleurs utilisables ici</a>
+            </p>
+            <p><br><br><br> Sources :<br></p>
+            <a href="https://www.quackit.com/css/color/values/">Quackit - CSS color values<br></a>
+            <a href="https://www.w3schools.com/cssref/css_colors_legal.asp">W3schools - CSS Legal Color Values</a>
         </div>
-    </header>
-
-    <div class="article-layout-ctn">
-        <h2 class="works-title">
-            <span class="works-title-2">Comprendre les modes de couleur en CSS<br></span>
-            <span class="works-title-1">rgb, rgba, #hex, hsl, hwb...<br><br></span>
-        </h2>
-        <p>
-            Il existe différentes manières d'écrire les couleurs en CSS.<br>
-            Chacune ayant ses spécifités il interessant de toutes les connaitre pour être sur de maximiser ses possiblités de création, mais aussi pour ne plus vous demander quel est ce mystérieux <strong>hsl</strong> ou <strong>#f6b4</strong> dans les prochains fichiers que vous lirez.<br>
-            Allez on commence en douceur avec le plus connu.<br><br><br>
-        </p>
-
-        <h3>Les Hexadécimales a.k.a. #40e2ed<br><br></h3>
-        <p>
-            Pour comprendre le fameux code couleur avec le <strong>#</strong> il faut d'abord savoir ce que veux dire hexadécimal.<br>
-            En informatique, l'hexadécimal est un des systèmes de numérotation utilisé pour contenir et/ou composer une information. Il à une base de 16 ce qui veut dire qu'il à 16 unités différentes, contrairement aux 10 unités du système mathématique basique.<br>
-            Ces unités sont :<br>
-            <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F</strong><br>
-            Ces 16 unités représentent une échelle allant de 0 à F, 0 ayant une intensité nulle et F une intensité maximale.
-            Le système de couleur hexadécimal est <strong>basé sur l'affichage RGB</strong> (red, green, blue) de nos écrans. Du fait de la synthèse additive des couleurs, si l'on donne une intensité maximale à chaque couleur on obtient du blanc, et inversement on obtient du noir si l'intensité est nulle.<br><br>
-            Il existe <strong>4 manières</strong> d'écrire les couleurs en hexadécimal : avec 3, 4, 6 et 8 valeurs après le #.<br><br>
-        </p>
-        <h4>#RGB</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> où R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. On obtient la couleur suivante :<br>
-            <div style="height: 30px; width: 30px; background-color: #f00; margin: 15px 0 30px;"></div>
-        </p>
-        <h4>#RGBA</h4>
-        <p>
-            Ce système est le même que le précédent, mais avec la possibilité de <strong>déterminer l'opacité</strong> en même temps que la couleur. <strong>L'opacité est mesurée de 0 à f</strong> et se place à la fin du code.<br>
-            Ainsi <strong>#f004</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu et une opacité de 4 sur f (soit 4 sur 16). Avec ce code nous obtenons la couleur suivante :<br>
-            <div style="height: 30px; width: 30px; background-color: #0f04; margin: 15px 0 30px;"></div>
-        </p>
-        <h4>#RRGGBB</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br>
-            <strong>#0000f8</strong> donne alors
-            <div style="height: 30px; width: 30px; background-color: #0000ff; margin: 15px 0 30px;"></div>
-        </p>
-        <h4>#RRGGBBAA</h4>
-        <p>
-            Ce système est le même que le précédent, mais avec la possibilié de <strong>déterminer l'opacité</strong> en même temps que la couleur, comme pour le <strong>#RGBA.</strong> L'opacité est mesurée <strong>de 00 à ff</strong> et se place à la fin du code.<br>
-            Ainsi <strong>#ff000022</strong> à une opacité de 22 sur ff (soit 22 sur 160). Nous obtenons alors :<br>
-            <div style="height: 30px; width: 30px; background-color: #ff000022; margin: 15px 0 30px;"></div>
-            <br><br>
-        </p>
-        <h3>Les RGB, la base de nos écrans<br><br></h3>
-        <h4>rbg(R,G,B)</h4>
-        <p>
-            Le <strong>RGB</strong> est basé sur la même logique que l'hexadécimal, chaque valeur va définir l'intensité du rouge, du vert et du bleu mais cette fois-ci sur une échelle <strong>de 0 à 255</strong><br>
-            Le système rgb s'écrit <strong>rgb(R,G,B)</strong> tel que <strong>rgb(0,255,0)</strong> donne la couleur suivante :<br>
-            <div style="height: 30px; width: 30px; background-color: rgb(0,255,0); margin: 15px 0 30px;"></div>
-        </p>
-        <h4>rbga(R,G,B,A)</h4>
-        <p>
-            Cette notation permet de <strong>régler l'opacité sur du rgb.</strong> L'alpha s'écrit sur une échelle <strong>de 0 à 1</strong> avec deux décimales maximum.<br>
-            En l'écrivant <strong>rgba(R,G,B,A)</strong> tel que <strong>rgba(0,0,255,0.5)</strong> on obtient :<br>
-            <div style="height: 30px; width: 30px; background-color: rgba(0,0,255,0.5); margin: 15px 0 30px;"></div>
-            <br><br>
-        </p>
-        <h3>Le HSL, une nouvelle manière de déterminer la teinte<br><br></h3>
-        <h4>hsl(H,S,L)</h4>
-        <p>
-            Les valeurs de l'<strong>HSL</strong> (hue saturation lightness) correspondent à la teinte déterminée en degré <strong>de 0 à 360</strong>, la saturation <strong>en pourcentage</strong> et la lumière (le blanc) <strong>en pourcentage</strong> également<br>
-            En animant notre hsl de <strong>hsl(0,100%,50%)</strong> à <strong>hsl(360,100%,50%)</strong> on peut voir ceci :<br>
-            <div style="height: 30px; width: 30px; margin: 15px 0 30px;" id="color-modes-hsl"></div>
-        </p>
-        <h4>hsla(H,S,L,A)</h4>
-        <p>
-            Vous commencez à avoir l'habitude, on rajoute une valeur A à la fin pour <strong>donner l'opacité en pourcentage</strong> ou <strong>entre 0 et 1</strong> de la même manière qu'en RGBA.<br>
-            En écrivant <strong>hsla(230,90%,80%,0.6)</strong> on à :<br>
-            <div style="height: 30px; width: 30px; background-color: hsla(230,90%,80%,0.6); margin: 15px 0 30px;"></div>
-            <br><br>
-        </p>
-        <h3>Le HWB, une alternative au HSL (pas encore disponible)<br><br></h3>
-        <h4>hwb(H,W,B)</h4>
-        <p>
-            <strong>HWB</strong> est une suggestion pour la prochaine version de CSS (CSS4), ses initiales correspondent à Hue Black White. Il fonctionne de la même manière que <strong>HSL</strong> à la différence que la valeur du milieu correspond cette fois au <strong>pourcentage de noir.</strong><br>
-            On écrit donc le degré de la teinte <strong>de 0 à 360</strong>, le <strong>pourcentage</strong> de blanc et le <strong>pourcentage</strong> de noir.<br>
-            Ce système pourrait également avoir une notation <strong>hwba(H,W,B,A)</strong> qui prendrait en compte l'opacité.<br><br><br>
-        </p>
-        <h3>Quelques cas particuliers<br><br></h3>
-        <h4>transparent</h4>
-        <p>
-            La valeur <strong>transparent</strong> permet de rendre un élément totalement transparent, cela revient au même que d'écrire <strong>#0000</strong> ou encore <strong>rgba(0,0,0,0)</strong><br><br>
-        </p>
-        <h4>currentcolor</h4>
-        <p>
-            La valeur <strong>currentcolor</strong> permet de récupérer la couleur de la propriété <strong>color</strong> annoncée auparavant dans un même groupe.<br><br>
-        </p>
-        <h4>noir, blanc, rouge ...</h4>
-        <p>
-            Vous pouvez également utiliser les noms des couleurs pour les définir, vous pouvez retrouver <a href="https://htmlcolorcodes.com/fr/noms-de-couleur/">la liste complète des couleurs utilisables ici</a>
-        </p>
-        <p><br><br><br> Source :<br></p>
-        <a href="https://www.quackit.com/css/color/values/">Quackit - CSS color values</a>
     </div>
-</div>
 
-<script class="logo-header-hover-anim">
-    var headerLogo = document.querySelector('.header-logo');
-    function logoHoverAnim() {
-        headerLogo.classList.add('header-logo-active');
+    <script type="text/javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="js/articles.js"></script>
+    <script type="text/javascript" src="js/portfolio-articles-navbar.js"></script>
 
-        setTimeout(function() {
-            headerLogo.classList.remove('header-logo-active');
-        }, 1000);
-    }
-    headerLogo.addEventListener('mouseenter', logoHoverAnim);
-</script>
-<script class="top-header-reveal">
-    const projectSlides = document.querySelectorAll('.slide-card');
-    const header = document.querySelector('header');
-    var prevScrollpos = window.pageYOffset;
-
-    function revealHeader() {
-        var currentScrollPos = window.pageYOffset;
-        if ((prevScrollpos < currentScrollPos) && (window.innerWidth < 700)){
-                header.classList.remove('header-reveal');
-                for (let i = 0; i < projectSlides.length; i++) {
-                    projectSlides[i].style.paddingTop = '5vh';   
-                }
-        }
-        else if (prevScrollpos > currentScrollPos + 2) {
-            header.classList.add('header-reveal');
-            for (let i = 0; i < projectSlides.length; i++) {
-                    projectSlides[i].style.paddingTop = 'calc(5vh + 78px)';   
-                }
-        }
-        prevScrollpos = currentScrollPos;
-    }
-    window.addEventListener('scroll', revealHeader);
-    window.addEventListener('resize', revealHeader);
-
-    if ((window.innerWidth > 700) || (prevScrollpos == 0)) {
-        header.classList.add('header-reveal');
-    }
-</script>
 </body>

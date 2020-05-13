@@ -18,174 +18,130 @@
 </head>
 
 <body>
-<div id="main">
-    <header>
-        <a href="index.html" class="header-logo-ctn">
-            <img src="img/rcc-logo.svg" alt="rcc-logo" class="header-logo">
-            <p class="header-title">Raphael&nbsp;<span class="header-rcc-yellow">Chillio</span></p>
-        </a>
-        <div class="header-links-ctn">
-            <a class="header-link header-link-index" id="header-pres" href="index.html">Accueil</a>
-            <a class="header-link header-link-yellow header-link-yellow-alt" id="header-port" href="portfolio.html">Portfolio</a>
-            <a class="header-link header-link-yellow" id="header-arti" href="articles.html">Articles</a>
+    <div id="main">
+        <header>
+            <a href="index.html" class="header-logo-ctn">
+                <img src="img/rcc-logo.svg" alt="rcc-logo" class="header-logo">
+                <p class="header-title">Raphael&nbsp;<span class="header-rcc-yellow">Chillio</span></p>
+            </a>
+            <div class="header-links-ctn">
+                <a class="header-link header-link-index" id="header-pres" href="index.html">Accueil</a>
+                <a class="header-link header-link-yellow header-link-yellow-alt" id="header-port" href="portfolio.html">Portfolio</a>
+                <a class="header-link header-link-yellow" id="header-arti" href="articles.html">Articles</a>
+            </div>
+        </header>
+
+        <div class="article-layout-ctn">
+            <h2 class="works-title">
+                <span class="works-title-2">Les unités de mesure en CSS<br></span>
+                <span class="works-title-1">px, cm, %, vw, em ...<br><br></span>
+            </h2>
+            <p>
+                En CSS chaque unité de mesure à ses spécificités, il est toujours intéressant de les connaitre pour optimiser ses compétences de mise en page !<br>
+                Je vais passer en revue l'ensemble des ces unités avec vous pour enfin les comprendre toutes<br><br><br>
+            </p>
+
+            <h3>Quelque notions utiles<br><br></h3>
+            <h4>La différence entre la taille de l'écran, la résolution physique, la résolution logique et le pixel ratio</h4>
+            <p>
+                Afin de pouvoir parler de mesure il faut d'abord comprendre l'environnement dans lequel on se place pour les effectuer.<br>
+                Vous avez peut être déjà vu deux tailles différentes en pixel pour un même appareil, ce qui peut porter à confusion, et puis dans tous les cas, un écran, ça se mesure en pixel ou en pouce?<br><br>
+
+                <strong>La taille de l'écran</strong><br>
+                La taille de l'écran est <strong>la longueur de sa diagonale en pouces</strong> (souvent écrit en anglais : inches ou in).<br>
+                Vous pouvez la mesurer vous même avec une règle<br><br>
+
+                <strong>La résolution physique</strong><br>
+                La résolution d'un écran, c'est <strong>le nombre de pixels de sa longueur et sa hauteur</strong>.<br>
+                Si je ne me trompe pas, la résolution de votre écran devrait être de <strong></strong><span id="article-2-screen-width"></span> par <span id="article-2-screen-height"></span></strong><br><br>
+
+                <strong>La résolution logique (ou viewport)</strong><br>
+                La résolution logique est <strong>le nombre de pixels qu'affiche votre écran</strong> :<br>
+                Vous savez peut-être que deux écrans de même taille peuvent avoir une résolution différente, car il existe des pixels de différente taille.<br>
+                Donc pour une taille d'écran donnée, <strong>plus ses pixels sont petit, plus la résolution physique augmente et plus l'image est précise.</strong>
+                Cependant si les longueurs CSS en pixel dépendaient de la taille des pixels physiques un élément de 30px de hauteur serait deux fois plus petit sur un écran HD que sur un écran classique .<br><br>
+                Pour palier à ce problème on défini une résolution logique qui <strong>permet de garder des proportions similaires</strong> entre les éléments web sur des écrans de résolution différente.<br><br>
+
+                <strong>Le pixel ratio</strong><br>
+                Le pixel ratio est <strong>le rapport entre la résolution physique et logique</strong> : Si un écran utilise 2 pixels physique (votre écran) pour 1 pixel logique (CSS) le pixel ratio est de 2<br>
+                <strong>(pixel ratio = résolution physique / résolution logique)</strong><br><br>
+
+                <div style="background-color: black; height:10px; width: 10px; margin:20px 20px 20px 0"></div>
+                <div style="background-color: black; height:10mm; width: 10mm; margin:20px 20px 20px 0"></div>
+                <div style="background-color: black; height:10pt; width: 10pt; margin:20px 20px 20px 0"></div>
+                <div style="background-color: black; height:10pc; width: 10pc; margin:20px 20px 20px 0"></div>
+
+            </p>
+            <h3>Les unités fixes<br><br></h3>
+            <h4>Les pixels (px)</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
+            </p>
+            <h4>Les centimètres et les millimètres (cm et mm)</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
+            </p>
+            <h4>les pouces (in)</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
+            </p>
+            <h4>Les points (pt)</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
+            </p>
+            <h4>les picas (pc)</h4>
+            <p>
+                Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
+                Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
+            </p>
+            <h3>Les unités relatives<br><br></h3>
+            <h4>Les pourcentages (%)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le viewport width et viewport height (vw et vh)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le viewport min et viewport max (vmin et vmax)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le em (em)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le root em (rem)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le charactère (ch)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            <h4>Le x-height (ex)</h4>
+            <p>
+                Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
+                Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
+            </p>
+            
+            <p><br><br><br> Source principale :<br></p>
+            <a href="https://www.w3schools.com/cssref/css_units.asp">w3schools - CSS units</a>
         </div>
-    </header>
-
-    <div class="article-layout-ctn">
-        <h2 class="works-title">
-            <span class="works-title-2">Les unités de mesure en CSS<br></span>
-            <span class="works-title-1">px, cm, %, vw, em ...<br><br></span>
-        </h2>
-        <p>
-            En CSS chaque unité de mesure à ses spécificités, il est toujours intéressant de les connaitre pour optimiser ses compétences de mise en page !<br>
-            Je vais passer en revue l'ensemble des ces unités avec vous pour enfin les comprendre toutes<br><br><br>
-        </p>
-
-        <h3>Quelque notions utiles<br><br></h3>
-        <h4>La différence entre la taille de l'écran, la résolution physique, la résolution logique et le pixel ratio</h4>
-        <p>
-            Afin de pouvoir parler de mesure il faut d'abord comprendre l'environnement dans lequel on se place pour les effectuer.<br>
-            Vous avez peut être déjà vu deux tailles différentes en pixel pour un même appareil, ce qui peut porter à confusion, et puis dans tous les cas, un écran, ça se mesure en pixel ou en pouce?<br><br>
-
-            <strong>La taille de l'écran</strong><br>
-            La taille de l'écran est <strong>la longueur de sa diagonale en pouces</strong> (souvent écrit en anglais : inches ou in).<br>
-            Vous pouvez la mesurer vous même avec une règle<br><br>
-
-            <strong>La résolution physique</strong><br>
-            La résolution d'un écran, c'est <strong>le nombre de pixels de sa longueur et sa hauteur</strong>.<br>
-            Si je ne me trompe pas, la résolution de votre écran devrait être de <strong></strong><span id="article-2-screen-width"></span> par <span id="article-2-screen-height"></span></strong><br><br>
-
-            <strong>La résolution logique (ou viewport)</strong><br>
-            La résolution logique est <strong>le nombre de pixels qu'affiche votre écran</strong> :<br>
-            Vous savez peut-être que deux écrans de même taille peuvent avoir une résolution différente, car il existe des pixels de différente taille.<br>
-            Donc pour une taille d'écran donnée, <strong>plus ses pixels sont petit, plus la résolution physique augmente et plus l'image est précise.</strong>
-            Cependant si les longueurs CSS en pixel dépendaient de la taille des pixels physiques un élément de 30px de hauteur serait deux fois plus petit sur un écran HD que sur un écran classique .<br><br>
-            Pour palier à ce problème on défini une résolution logique qui <strong>permet de garder des proportions similaires</strong> entre les éléments web sur des écrans de résolution différente.<br><br>
-
-            <strong>Le pixel ratio</strong><br>
-            Le pixel ratio est <strong>le rapport entre la résolution physique et logique</strong> : Si un écran utilise 2 pixels physique (votre écran) pour 1 pixel logique (CSS) le pixel ratio est de 2<br>
-            <strong>(pixel ratio = résolution physique / résolution logique)</strong><br><br>
-
-            <div style="background-color: black; height:10px; width: 10px; margin:20px 20px 20px 0"></div>
-            <div style="background-color: black; height:10mm; width: 10mm; margin:20px 20px 20px 0"></div>
-            <div style="background-color: black; height:10pt; width: 10pt; margin:20px 20px 20px 0"></div>
-            <div style="background-color: black; height:10pc; width: 10pc; margin:20px 20px 20px 0"></div>
-
-        </p>
-        <h3>Les unités fixes<br><br></h3>
-        <h4>Les pixels (px)</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
-        </p>
-        <h4>Les centimètres et les millimètres (cm et mm)</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
-        </p>
-        <h4>les pouces (in)</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
-        </p>
-        <h4>Les points (pt)</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
-        </p>
-        <h4>les picas (pc)</h4>
-        <p>
-            Ce système se lit tel que <strong>#RGB</strong> oú R, G et B sont les valeurs de rouge, vert et bleu qui composent la couleur.<br>
-            Ainsi <strong>#f00</strong> à une intensité maximale (F) pour le rouge, et une intensité minimale (0) pour le vert et le bleu. Avec ce code nous obtenons la couleur suivante :<br><br>
-        </p>
-        <h3>Les unités relatives<br><br></h3>
-        <h4>Les pourcentages (%)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le viewport width et viewport height (vw et vh)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le viewport min et viewport max (vmin et vmax)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le em (em)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le root em (rem)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le charactère (ch)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        <h4>Le x-height (ex)</h4>
-        <p>
-            Ce système est le plus utilisé car il est court est précis, c'est le même que <strong>#RGB</strong> avec plus de précision. <strong>Chaque valeur est suivie d'une deuxième qui précise l'intensité.</strong><br>
-            Par exemple, <strong>#00f</strong> est la même couleur que <strong>#0000ff</strong> et si j'ai besoin des valeurs entre <strong>#e00</strong> et <strong>#f00</strong>, on peut les avoir en écrivant <strong>#ee0000, #ef0000, #f00000 ... #fd0000 #fe0000#ff0000</strong><br><br>
-        </p>
-        
-        <p><br><br><br> Source principale :<br></p>
-        <a href="https://www.w3schools.com/cssref/css_units.asp">w3schools - CSS units</a>
     </div>
-</div>
 
-<script class="logo-header-hover-anim">
-    var headerLogo = document.querySelector('.header-logo');
-    function logoHoverAnim() {
-        headerLogo.classList.add('header-logo-active');
+    <script type="text/javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="js/articles.js"></script>
+    <script type="text/javascript" src="js/portfolio-articles-navbar.js"></script>
 
-        setTimeout(function() {
-            headerLogo.classList.remove('header-logo-active');
-        }, 1000);
-    }
-    headerLogo.addEventListener('mouseenter', logoHoverAnim);
-</script>
-<script class="top-header-reveal">
-    const projectSlides = document.querySelectorAll('.slide-card');
-    const header = document.querySelector('header');
-    var prevScrollpos = window.pageYOffset;
-
-    function revealHeader() {
-        var currentScrollPos = window.pageYOffset;
-        if ((prevScrollpos < currentScrollPos) && (window.innerWidth < 700)){
-                header.classList.remove('header-reveal');
-                for (let i = 0; i < projectSlides.length; i++) {
-                    projectSlides[i].style.paddingTop = '5vh';   
-                }
-        }
-        else if (prevScrollpos > currentScrollPos + 2) {
-            header.classList.add('header-reveal');
-            for (let i = 0; i < projectSlides.length; i++) {
-                    projectSlides[i].style.paddingTop = 'calc(5vh + 78px)';   
-                }
-        }
-        prevScrollpos = currentScrollPos;
-    }
-    window.addEventListener('scroll', revealHeader);
-    window.addEventListener('resize', revealHeader);
-
-    if ((window.innerWidth > 700) || (prevScrollpos == 0)) {
-        header.classList.add('header-reveal');
-    }
-</script>
-
-<script class="screen-resolution-finder">
-    const screenWidthCtn = document.querySelector('#article-2-screen-width');
-    const screenHeightCtn = document.querySelector('#article-2-screen-height');
-
-    screenWidthCtn.innerHTML += `${screen.width}px`;
-    screenHeightCtn.innerHTML += `${screen.height}px`;
-
-</script>
 </body>
