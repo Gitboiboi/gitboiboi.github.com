@@ -1,25 +1,35 @@
-/*  ##############################  */
+/*  #########  Variables ##  */
+
+:root {
+	--dark-blue: #008a96;
+	--yellow: #eaa100;
+}
 /*  #########  Document Layout  ##  */
 
 body, html{
+	height: auto;
 	margin: 0;
 	padding: 0;
+	width: 100vw;
 	max-width: 100vw;
+	min-width: 100vw;
 }
 body{
+	height: auto;
 	scroll-behavior: smooth;
 	font-family: 'Barlow';
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	background-color: #c1f2f2;
-	overflow: hidden;
+	overflow-x: hidden;
 	overflow-y: scroll;
 }
 #main {
+	height: auto;
 	width: 100vw;
 	max-width: 100vw;
 	min-width: 100vw;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .main-scroll-stop {
 	position: fixed;
@@ -49,7 +59,7 @@ p {
 }
 a, a:hover{
 	text-decoration: none;
-	color: #eaa100;
+	color: var(--yellow);
 	font-weight: 500;
 	font-size: 18px;
 }
@@ -92,7 +102,7 @@ header {
 .header-title {
 	font-size: 23px;
 	font-weight: 300;
-	color: #008a96;
+	color: var(--dark-blue);
 	font-family: "Barlow";
 	text-transform: uppercase;
 }
@@ -102,7 +112,7 @@ header {
 	}
 }
 .header-rcc-yellow {
-	color: #eaa100;
+	color: var(--yellow);
 }
 .header-logo {
 	height: 42px;
@@ -138,7 +148,7 @@ header {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	color: #008a96;
+	color: var(--dark-blue);
 	-webkit-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
@@ -159,7 +169,7 @@ a.header-link:hover {
 	}
 }
 .header-link-yellow {
-	color: #eaa100;
+	color: var(--yellow);
 	font-weight: 500;
 }
 .header-link-yellow:hover{
@@ -557,20 +567,20 @@ a.header-link:hover {
 .index-title-1 {
 	font-weight: 300;
 	font-size: 28px;
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .index-title-2 {
 	font-weight: 300;
 	font-size: calc(30px + 1.5vw);
 	text-transform: uppercase;
-	color: #eaa100;
+	color: var(--yellow);
 }
 .index-title-3 {
 	margin-top: 17px;
 	font-size: 25px;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	text-transform: uppercase;
-	color: #008a96;
+	color: var(--dark-blue);
 	font-weight: 500;
 }
 
@@ -655,7 +665,7 @@ a.header-link:hover {
 }
 
 .index-links-blue {
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .index-links-blue:hover {
 	-ms-transform: translateX(5px);
@@ -668,7 +678,7 @@ a.header-link:hover {
 	content: '';
 	height: 30px;
 	width: 2px;
-	background-color: #008a96;
+	background-color: var(--dark-blue);
 	top: 14px;
 	left: 0;
 	-webkit-transition: all 0.2s;
@@ -681,7 +691,7 @@ a.header-link:hover {
 }
 
 .index-links-yellow {
-	color: #eaa100;
+	color: var(--yellow);
 	margin-left: 30px;
 }
 .index-links-yellow:hover {
@@ -695,7 +705,7 @@ a.header-link:hover {
 	content: '';
 	height: 30px;
 	width: 2px;
-	background-color: #eaa100;
+	background-color: var(--yellow);
 	top: 14px;
 	left: 0;
 	-webkit-transition: all 0.2s;
@@ -795,10 +805,10 @@ a.header-link:hover {
 	text-transform: uppercase;
 }
 .about-name-blue {
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .about-name-yellow {
-	color: #eaa100;	
+	color: var(--yellow);	
 }
 .about-logo {
 	position: absolute;
@@ -819,7 +829,7 @@ a.header-link:hover {
 	font-weight: 500;
 	line-height: 30px;
 	text-transform: uppercase;
-	color: #008a96;
+	color: var(--dark-blue);
 
 	margin-top: 12px;
 }
@@ -854,7 +864,7 @@ a.header-link:hover {
 	transition: all 2s;
 }
 .about-intro-ctn h3, .about-education h3, .about-jobs h3, .about-skills h3{
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .about-intro-after {
 	position: absolute;
@@ -876,9 +886,9 @@ a.header-link:hover {
 }
 .about-intro-btn {
 	margin-top: 30px;
-	color: #eaa100;
+	color: var(--yellow);
 	padding: 6px 10px;
-	border: 1px solid #eaa100;
+	border: 1px solid var(--yellow);
 	cursor: pointer;
 	display: inline-block;
 }
@@ -895,11 +905,11 @@ a.header-link:hover {
 	width: calc(50% - 30px);
 }
 .about-hr {
-	border: 1px solid #008a96;;
+	border: 1px solid var(--dark-blue);;
 }
 .about-ctt-bold {
 	font-weight: 600;
-	color: #008a96;
+	color: var(--dark-blue);
 }
 @media screen and (max-width: 750px) {
 	.about-education, .about-jobs{
@@ -974,13 +984,13 @@ a.header-link:hover {
 .about-skills-bold-title {
 	font-size: 21px;
 	font-weight: 600;
-	color: #008a96;
+	color: var(--dark-blue);
 	margin: 15px 0 8px;
 }
 .about-skills-title {
 	font-size: 19px;
 	font-weight: 500;
-	color: #008a96;
+	color: var(--dark-blue);
 	margin: 15px 0 8px;
 }
 .about-skills-logo {
@@ -1196,7 +1206,7 @@ a.header-link:hover {
 	}
 }
 .works-hr {
-	border: 1px solid #008a96;;
+	border: 1px solid var(--dark-blue);;
 }
 
 /*  #########  About titles  ##  */
@@ -1204,13 +1214,13 @@ a.header-link:hover {
 .works-title-1 {
 	font-weight: 300;
 	font-size: calc(20px + 1vw);
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .works-title-2 {
 	font-weight: 500;
 	font-size: calc(20px + 2vw);
 	text-transform: uppercase;
-	color: #eaa100;
+	color: var(--yellow);
 }
 
 .works-job {
@@ -1218,7 +1228,7 @@ a.header-link:hover {
 	font-weight: 500;
 	line-height: 30px;
 	text-transform: uppercase;
-	color: #008a96;
+	color: var(--dark-blue);
 
 	margin-top: 12px;
 }
@@ -1242,13 +1252,13 @@ a.header-link:hover {
 	margin-top: 40px;
 }
 .works-intro-ctn h3, .about-education h3, .about-jobs h3, .about-skills h3{
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .works-intro-btn {
 	margin-top: 30px;
-	color: #eaa100;
+	color: var(--yellow);
 	padding: 6px 10px;
-	border: 1px solid #eaa100;
+	border: 1px solid var(--yellow);
 	cursor: pointer;
 	display: inline-block;
 }
@@ -1305,7 +1315,7 @@ a.header-link:hover {
 }
 .works-section-ctt ul li::before {
 	content: "● ";
-	color: #eaa100;
+	color: var(--yellow);
 	position: absolute;
 	left: -15px;
 	top: -1px;
@@ -1520,7 +1530,7 @@ a.header-link:hover {
 	}
 }
 .contact-hr {
-	border: 1px solid #008a96;;
+	border: 1px solid var(--dark-blue);;
 }
 
 /*  #########  Contact titles  ##  */
@@ -1528,23 +1538,23 @@ a.header-link:hover {
 .contact-title-1 {
 	font-weight: 300;
 	font-size: calc(17px + 1vw);
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .contact-title-2 {
 	font-weight: 500;
 	font-size: calc(18px + 2vw);
 	text-transform: uppercase;
-	color: #eaa100;
+	color: var(--yellow);
 }
 .contact-title-3 {
 	font-weight: 600;
 	font-size: calc(16px + 1vw);
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .contact-title-4 {
 	font-weight: 600;
 	font-size: calc(17px + 1.2vw);
-	color: #eaa100;
+	color: var(--yellow);
 }
 
 .contact-job {
@@ -1552,7 +1562,7 @@ a.header-link:hover {
 	font-weight: 500;
 	line-height: 30px;
 	text-transform: uppercase;
-	color: #008a96;
+	color: var(--dark-blue);
 
 	margin-top: 12px;
 }
@@ -1564,7 +1574,7 @@ a.header-link:hover {
 }
 
 .contact-section h3{
-	color: #008a96;
+	color: var(--dark-blue);
 }
 
 /*  #########  Contact Intro ##  */
@@ -1598,7 +1608,7 @@ a.header-link:hover {
 	}	
 }
 .contact-logo-ctn p {
-	color: #008a96;
+	color: var(--dark-blue);
 	font-weight: 500;
 	font-size: 24px
 }
@@ -1840,18 +1850,18 @@ a.header-link:hover {
 .portfolio-title{
 	font-weight: 400;
 	font-size: 28px;
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .portfolio-title-1 {
 	font-weight: 400;
 	font-size: 28px;
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .portfolio-title-2 {
 	font-weight: 500;
 	font-size: calc(30px + 1.5vw);
 	text-transform: uppercase;
-	color: #eaa100;
+	color: var(--yellow);
 	text-align: center;
 }
 .portfolio-ctn {
@@ -1950,21 +1960,21 @@ a.header-link:hover {
 	left: calc(1.6vw + 10px)
 }
 .project-client {
-	color: #008a96;
+	color: var(--dark-blue);
 	width: 100%;
 	margin-bottom: 0px;
 }
 .project-client-job {
 	width: 100%;
 	font-size: 20px;
-	color: #008a96;
+	color: var(--dark-blue);
 	width: 100%;
 	font-weight: 400;
 	margin-bottom: 8px;
 }
 .project-description {
 	font-size: 23px;
-	color: #eaa100;
+	color: var(--yellow);
 	font-weight: 500;
 	width: 100%;
 }
@@ -1973,8 +1983,8 @@ a.header-link:hover {
 	width: 50px;
 	
 	background-color: transparent;
-	color: #eaa100;
-	border: 1px solid #eaa100;
+	color: var(--yellow);
+	border: 1px solid var(--yellow);
 	font-size: 30px;
 	cursor: pointer;
 
@@ -2080,7 +2090,7 @@ a.header-link:hover {
 	justify-content: space-between;
 	padding: 0 5vw;
 
-	background-color: #008a96;;
+	background-color: var(--dark-blue);;
 }
 @media screen and (max-width: 700px) {
 	.sorting-btns-ctn{
@@ -2108,11 +2118,11 @@ a.header-link:hover {
 }
 h3.portfolio-filter-active {
 	background-color: #fff;
-	color: #008a96;
+	color: var(--dark-blue);
 	transition: all 0.3s;
 }
 .portfolio-hr {
-	border: 1px solid #008a96;
+	border: 1px solid var(--dark-blue);
 	margin: 0;
 }
 
@@ -2192,14 +2202,14 @@ z-index: 9500;
 
 .slide-card h2{
 	font-size: calc(20px + 2vw);
-	color: #008a96;
+	color: var(--dark-blue);
 }
 .slide-card h3{
-	color: #008a96;
+	color: var(--dark-blue);
 	margin-bottom: 5px;
 }
 .slide-card h4{
-	color: #eaa100;
+	color: var(--yellow);
 	margin-bottom: 30px;
 }
 .slide-card p{
@@ -2258,7 +2268,7 @@ z-index: 9500;
 }
 .article-date {
 	font-size: 18px;
-	color: #eaa100;
+	color: var(--yellow);
 }
 
 /*  ##################################  */
@@ -2272,11 +2282,11 @@ z-index: 9500;
 	background-color: #ffffff;
 }
 .article-layout-ctn h3 {
-	color: #eaa100;
+	color: var(--yellow);
 	font-size: 26px;
 }
 .article-layout-ctn h4 {
-	color: #008a96;
+	color: var(--dark-blue);
 	font-size: 20px;
 	margin-bottom: 5px
 }
